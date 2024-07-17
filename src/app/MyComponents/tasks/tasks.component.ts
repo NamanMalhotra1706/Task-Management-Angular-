@@ -3,6 +3,7 @@ import { Task } from '../../Task';
 import { TaskItemsComponent } from '../task-items/task-items.component';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { AddTaskComponent } from '../add-task/add-task.component';
+import { CsvExportService } from '../../services/csv-export.service';
 
 @Component({
   selector: 'app-tasks',
@@ -18,8 +19,18 @@ export class TasksComponent implements OnInit {
   tasks: Task[] = [];
 
   constructor(
-    @Inject(PLATFORM_ID) private platformId: object
+    @Inject(PLATFORM_ID) private platformId: object,
+    private csvExportService: CsvExportService
   ) {}
+
+  exportTasksToCsv() {
+    if (this.tasks.length > 0) {
+      this.csvExportService.exportToCsv(this.tasks);
+    } else {
+      // Handle case where there are no tasks to export
+      console.log('No tasks to export.');
+    }
+  }
 
   sortTasks(criteria: 'dueDate' | 'priority' | 'status') {
     if (criteria === 'dueDate') {

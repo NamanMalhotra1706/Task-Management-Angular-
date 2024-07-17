@@ -1,52 +1,65 @@
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .sort-buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  }
-  
-  .sort-buttons .btn {
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .sort-buttons .btn-primary {
-    background-color: #007bff;
-    border: none;
-    color: white;
-  }
-  
-  .sort-buttons .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  h3 {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .task-item-container {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  .task-item-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  
-  .task-item-buttons .btn {
-    font-size: 14px;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.sort-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.sort-buttons .btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.sort-buttons .btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: white;
+}
+
+.sort-buttons .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.export-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #28a745; /* Green background color */
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.export-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.task-item-container {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.task-item-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.task-item-buttons .btn {
+  font-size: 14px;
+}

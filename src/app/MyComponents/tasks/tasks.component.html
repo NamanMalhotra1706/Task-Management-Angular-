@@ -9,6 +9,7 @@
 
   <ng-template #elseBlock>
     <div class="sort-buttons">
+      <button class="btn btn-primary" (click)="exportTasksToCsv()" class="export-button">Export to CSV</button>
       <button class="btn btn-primary" (click)="sortTasks('dueDate')">Sort by Due Date</button>
       <button class="btn btn-primary" (click)="sortTasks('priority')">Sort by Priority</button>
       <button class="btn btn-primary" (click)="sortTasks('status')">Sort by Status</button>
