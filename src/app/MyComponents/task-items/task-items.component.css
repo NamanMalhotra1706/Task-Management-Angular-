@@ -1,0 +1,91 @@
+.task-item-container {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 55%;
+  margin: 0 auto;
+}
+
+.task-item-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.task-item-description,
+.task-item-due-date,
+.task-item-priority {
+  margin-bottom: 10px;
+}
+
+.task-item-due-date {
+  font-style: italic;
+}
+
+.task-item-priority {
+  font-weight: bold;
+}
+
+.task-item-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.task-item-buttons button {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.task-item-buttons button:hover {
+  cursor: pointer;
+}
+
+.task-item-edit-button {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.task-item-edit-button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.task-item-save-button {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.task-item-save-button:hover {
+  background-color: #218838;
+  border-color: #218838;
+}
+
+.task-item-cancel-button {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+}
+
+.task-item-cancel-button:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.task-item-delete-button {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+.task-item-delete-button:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}

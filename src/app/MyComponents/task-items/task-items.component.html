@@ -1,0 +1,65 @@
+<div class="task-item-container my-3">
+  <div class="task-item-buttons">
+    <button
+      class="btn btn-sm btn-primary task-item-edit-button"
+      (click)="onEdit()"
+      [disabled]="editing"
+    >
+      Edit
+    </button>
+    <button
+      *ngIf="editing"
+      class="btn btn-sm btn-success task-item-save-button"
+      (click)="onSave()"
+      [disabled]="!isFormValid()"
+    >
+      Save
+    </button>
+    <button
+      *ngIf="editing"
+      class="btn btn-sm btn-secondary task-item-cancel-button"
+      (click)="onCancel()"
+    >
+      Cancel
+    </button>
+    <button
+      class="btn btn-sm btn-danger task-item-delete-button"
+      (click)="onDeleteTask(task)"
+    >
+      Delete
+    </button>
+  </div>
+  <h3 class="task-item-title">{{ task.title }}</h3>
+  <p class="task-item-description">Description: {{ task.desc }}</p>
+  <p class="task-item-due-date">
+    Due Date: {{ task.dueDate | date : "EEE MMM dd yyyy" }}
+  </p>
+  <p class="task-item-priority">
+    Priority:
+    <span *ngIf="!editing">{{ task.priority }}</span>
+    <select
+      *ngIf="editing"
+      class="form-control"
+      [(ngModel)]="editedTask.priority"
+      required
+    >
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+  </p>
+  <div class="task-item-status">
+    <span class="task-item-status-label">Status: </span>
+    <span *ngIf="!editing">{{ task.status }}</span>
+    <select
+      *ngIf="editing"
+      class="form-control"
+      [(ngModel)]="editedTask.status"
+      required
+    >
+      <option value="to-do">To-Do</option>
+      <option value="in-progress">In Progress</option>
+      <option value="completed">Completed</option>
+    </select>
+  </div>
+</div>

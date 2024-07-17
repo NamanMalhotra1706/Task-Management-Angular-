@@ -1,0 +1,58 @@
+<div class="container my-3">
+  <h4>Add a Task</h4>
+
+  <form (submit)="onSubmitTask()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        placeholder="Enter title"
+        name="title"
+        [(ngModel)]="newTask.title"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        class="form-control"
+        id="description"
+        rows="3"
+        placeholder="Enter description"
+        name="description"
+        [(ngModel)]="newTask.desc"
+        required
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="dueDate">Due Date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="dueDate"
+        placeholder="Select due date"
+        name="dueDate"
+        [(ngModel)]="newTask.dueDate"
+        required
+      />
+    </div>
+    <div class="form-group mb-3">
+      <label for="priority">Priority</label>
+      <select
+        class="form-control"
+        id="priority"
+        name="priority"
+        [(ngModel)]="newTask.priority"
+        required
+      >
+        <option value="" disabled selected>Select priority</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!isFormValid()">Add Task</button>
+  </form>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  <app-add-task (addTask)="onAddTask($event)"></app-add-task>
+
+  <h3>Your Tasks</h3>
+
+  <div *ngIf="tasks.length === 0; else elseBlock">
+    Currently, No Tasks Left
+  </div>
+
+  <ng-template #elseBlock>
+    <div class="sort-buttons">
+      <button class="btn btn-primary" (click)="sortTasks('dueDate')">Sort by Due Date</button>
+      <button class="btn btn-primary" (click)="sortTasks('priority')">Sort by Priority</button>
+      <button class="btn btn-primary" (click)="sortTasks('status')">Sort by Status</button>
+    </div>
+    <div *ngFor="let task of tasks">
+      <app-task-items
+        [task]="task"
+        (deleteTask)="onDeleteTask($event)"
+        (updateTask)="onUpdateTask($event)"
+      ></app-task-items>
+    </div>
+  </ng-template>
+</div>
